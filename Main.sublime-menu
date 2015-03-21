@@ -1,0 +1,12 @@
+[
+{
+    "id" : "tools",
+    "children":
+        [
+            {
+                "command": "es6_navigate",
+                "caption": "Go To ES6 Import"
+            }
+        ]
+}
+]
