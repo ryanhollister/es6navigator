@@ -1,12 +1,16 @@
-[
-{
-    "id" : "tools",
-    "children":
-        [
-            {
+[{
+  "id": "preferences",
+  "children": [{
+    "id": "package-settings",
+    "children": [{
+        "caption": "ES6 Navigator",
+            "children": [{
                 "command": "es6_navigate",
                 "caption": "Go To ES6 Import"
-            }
-        ]
-}
-]
+                }, {
+                "caption": "Set Plugin Options",
+                "command": "es6_navigate_set_plugin_options"
+            }]
+        }]
+    }]
+}]

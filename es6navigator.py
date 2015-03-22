@@ -1,5 +1,9 @@
 import sublime, sublime_plugin, os
 
+class Es6NavigateSetPluginOptionsCommand(sublime_plugin.TextCommand):
+  def run(self, edit):
+    self.view.window().open_file(os.path.dirname(os.path.realpath(__file__)) + '/es6navigator.sublime-settings')
+
 class Es6NavigateCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         fwd = self.view.sel()[0].b
@@ -33,15 +37,12 @@ class Es6NavigateCommand(sublime_plugin.TextCommand):
         s = sublime.load_settings('es6navigator.sublime-settings')
 
         module_prefix = s.get('module_prefix', 'app')
-        app_path = s.get('app_path', '')
+        module_path = s.get('module_path', '')
 
         # for paths in the application
         if (path.startswith(module_prefix)):
             proj = path.lstrip(module_prefix)
-            file = app_path + proj + '.js'
-            print(path)
-            print(app_path)
-            print(proj)
+            file = module_path + proj + '.js'
             self.view.window().open_file(file)
             return
 
