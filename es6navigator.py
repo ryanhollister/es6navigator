@@ -69,12 +69,12 @@ class Es6NavigateCommand(sublime_plugin.TextCommand):
                     node_file = folder + '/node_modules/' + path + '.js'
                     coffee_file = folder + '/node_modules/' + path + '.coffee'
                     em_addon = folder + '/node_modules/' + path.split('/')[0] + '/addon/' + '/'.join(path.split('/')[1:]) + '.js'
-                    em_coffee_addon = em_addon = folder + '/node_modules/' + path.split('/')[0] + '/addon/' + '/'.join(path.split('/')[1:]) + '.coffee'
+                    em_coffee_addon = folder + '/node_modules/' + path.split('/')[0] + '/addon/' + '/'.join(path.split('/')[1:]) + '.coffee'
                     if os.path.exists(node_file):
                         self.view.window().open_file(node_file)
                         return
                     # for paths to ember-addons
-                    elif os.path.exists(em_addon) : 
+                    elif os.path.exists(em_addon) :
                         self.view.window().open_file(em_addon)
                         return
                     elif os.path.exists(coffee_file) : 
