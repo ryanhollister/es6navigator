@@ -30,8 +30,10 @@ For example, if my ember-cli module_prefix is 'app' and the path to my ember cli
 
 {
     "module_prefix": "app", 
-    "module_path": "~/Code/my-ember-cli-app/app"
+    "module_path": "/opt/code/my-ember-cli-app/app"
 }
+
+Note that the module_path has to be an absolute path and ~ references wont work.
 
 # Usage
 
